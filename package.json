@@ -1,0 +1,23 @@
+{
+  "name": "trellodashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-client": "cd client && npm install",
+    "build":"cd client && npm run build",
+    "heroku-postbuild":"npm run install-client && npm run build",
+    "start":"cd server && npm run dev",
+    "client":"cd client && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milkcanbass/TorelloDashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milkcanbass/TorelloDashboard/issues"
+  },
+  "homepage": "https://github.com/milkcanbass/TorelloDashboard#readme"
+}
