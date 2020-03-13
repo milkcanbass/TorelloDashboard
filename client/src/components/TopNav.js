@@ -75,6 +75,9 @@ const TopNav = () => {
         cursor: "pointer"
       }
     },
+    menuText: {
+      marginLeft: 15
+    },
     inactive: {
       color: "#545454"
     },
@@ -172,7 +175,7 @@ const TopNav = () => {
               color='primary'
               className={classes.menuButton}
               onClick={handleClick2}>
-              Open Menu
+              Menu
             </Button>
             <StyledMenu
               id='customized-menu'
@@ -186,7 +189,7 @@ const TopNav = () => {
                     to={`/dashboards/${dashboardId}`}
                     className={`${classes.link2} ${calendarView && classes.inactive}`}>
                     <WebOutlinedIcon className={classes.icon} />
-                    <Typography>Dashboard</Typography>
+                    <Typography className={classes.menuText}>Dashboard</Typography>
                   </Link>
                 </ListItemIcon>
               </StyledMenuItem>
@@ -196,20 +199,20 @@ const TopNav = () => {
                     to={`/calendar/${dashboardId}`}
                     className={`${classes.link2} ${!calendarView && classes.inactive}`}>
                     <CalendarTodayIcon className={classes.icon} />
-                    <Typography>Calendar</Typography>
+                    <Typography className={classes.menuText}>Calendar</Typography>
                   </Link>
                 </ListItemIcon>
               </StyledMenuItem>
               <StyledMenuItem>
                 <ListItemIcon onClick={handleClickOpen}>
                   <AddIcon className={classes.icon} />
-                  <Typography>Create board</Typography>
+                  <Typography className={classes.menuText}>Create board</Typography>
                 </ListItemIcon>
               </StyledMenuItem>
               <StyledMenuItem>
                 <ListItemIcon onClick={logoutTrigger}>
                   <ExitToAppIcon className={classes.icon} />
-                  <Typography>Logout</Typography>
+                  <Typography className={classes.menuText}>Logout</Typography>
                 </ListItemIcon>
               </StyledMenuItem>
             </StyledMenu>
