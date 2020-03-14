@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "install-client": "cd client && npm install",
-    "build":"cd client && npm run build",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"    "client":"cd client && npm run start",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "client": "cd client && npm run start",
     "start": "node server.js",
     "dev": "nodemon ./bin/www",
     "debug": "nodemon  --inspect ./bin/www",
@@ -13,7 +14,7 @@
   },
   "engines": {
     "node": "12.10.0"
-},
+  },
   "dependencies": {
     "aws-sdk": "^2.634.0",
     "bcryptjs": "^2.4.3",
