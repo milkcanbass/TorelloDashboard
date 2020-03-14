@@ -3,6 +3,7 @@ const express = require("express");
 const { join } = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+require("dotenv").config();
 
 const userRouter = require("./routes/user");
 const dashboardRouter = require("./routes/dashboard");
