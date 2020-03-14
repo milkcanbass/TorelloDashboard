@@ -132,26 +132,20 @@ const CardProvider = props => {
 
         const updateCard = () => {
           if (deadline) {
-            authFetch(
-              `/calendar/${dashboardId}/columns/${columnId}/tasks/${task}`,
-              {
-                method: "PUT",
-                body: JSON.stringify(updatedTask)
-              }
-            )
+            authFetch(`/calendar/${dashboardId}/columns/${columnId}/tasks/${task}`, {
+              method: "PUT",
+              body: JSON.stringify(updatedTask)
+            })
               .then(res => setDeadlines(res))
               .catch(err => {
                 handleError(err);
               });
           }
 
-          authFetch(
-            `/dashboards/${dashboardId}/columns/${columnId}/tasks/${task}`,
-            {
-              method: "PUT",
-              body: JSON.stringify(updatedTask)
-            }
-          )
+          authFetch(`/dashboards/${dashboardId}/columns/${columnId}/tasks/${task}`, {
+            method: "PUT",
+            body: JSON.stringify(updatedTask)
+          })
             .then(res => updateUser(res))
             .then(() => handleCloseCard())
             .then(() => handleSuccess(`${title} has been updated!`))
@@ -309,8 +303,7 @@ const CardProvider = props => {
         openAttachment,
         attachment,
         handleAttachmentChange
-      }}
-    >
+      }}>
       {props.children}
     </CardContext.Provider>
   );
