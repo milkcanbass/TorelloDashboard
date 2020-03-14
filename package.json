@@ -5,12 +5,15 @@
   "scripts": {
     "install-client": "cd client && npm install",
     "build":"cd client && npm run build",
-    "heroku-postbuild":"npm run install-client && npm run build",
-    "client":"cd client && npm run start",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"    "client":"cd client && npm run start",
+    "start": "node server.js",
     "dev": "nodemon ./bin/www",
     "debug": "nodemon  --inspect ./bin/www",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --exit --timeout 30000"
   },
+  "engines": {
+    "node": "12.10.0"
+},
   "dependencies": {
     "aws-sdk": "^2.634.0",
     "bcryptjs": "^2.4.3",
