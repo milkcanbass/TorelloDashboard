@@ -3,7 +3,7 @@ const express = require("express");
 const { join } = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 require("dotenv").config();
 
 const userRouter = require("./routes/user");

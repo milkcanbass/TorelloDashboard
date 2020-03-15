@@ -4,7 +4,7 @@ const updateData = require("../util/util");
 const checkToken = require("../auth/validateToken");
 
 // Models;
-const { Task, Column, Dashboard } = require("../models/Dashboard");
+const { Task, Column, Dashboard } = require("../models/DashBoard");
 const Calendar = require("../models/Calendar");
 const User = require("../models/User");
 
