@@ -14,9 +14,7 @@ const SignUp = props => {
   let dashboardId = getCurrentBoard();
 
   const redirect = () => {
-    loggedIn() &&
-      dashboardId &&
-      props.history.push(`/dashboards/${dashboardId}`);
+    loggedIn() && dashboardId && props.history.push(`/dashboards/${dashboardId}`);
   };
 
   const signup = () => {
@@ -45,19 +43,19 @@ const SignUp = props => {
       <Grid item xs={12} md={6}>
         <Container className={classes.paper}>
           <div>
-            <Typography variant="h1" className={classes.title}>
+            <Typography variant='h1' className={classes.title}>
               Sign up to Kanban
             </Typography>
 
             <form onSubmit={handleSignUp}>
               <TextField
-                type="email"
-                label="Enter Email"
-                name="email"
+                type='email'
+                label='Enter Email'
+                name='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                variant="outlined"
-                margin="normal"
+                variant='outlined'
+                margin='normal'
                 fullWidth
                 InputProps={{
                   classes: {
@@ -71,13 +69,13 @@ const SignUp = props => {
               />
 
               <TextField
-                type="password"
-                label="Create password"
-                name="password"
+                type='password'
+                label='Create password'
+                name='password'
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                variant="outlined"
-                margin="normal"
+                variant='outlined'
+                margin='normal'
                 fullWidth
                 InputProps={{
                   classes: {
@@ -99,12 +97,12 @@ const SignUp = props => {
         </Container>
 
         <Container className={classes.footer}>
-          <Typography paragraph variant="h3">
+          <Typography paragraph variant='h3'>
             Already have an account?
           </Typography>
 
-          <Typography variant="h3">
-            <Link to="/signin">Login</Link>
+          <Typography variant='h3'>
+            <Link to='/'>Login</Link>
           </Typography>
         </Container>
       </Grid>

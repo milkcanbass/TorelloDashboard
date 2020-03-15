@@ -14,7 +14,7 @@ const PrivateRoute = ({ component: Component, render: Render = null, ...rest }) 
         ) : null
       ) : (
         props.history.replace({
-          pathname: "/signin",
+          pathname: "/",
           search: `?toRedirect=${props.location.pathname}`,
           state: { from: props.location }
         })

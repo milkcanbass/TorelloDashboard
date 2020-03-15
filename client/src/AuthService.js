@@ -35,7 +35,7 @@ const getToken = () => {
 const logout = () => {
   localStorage.removeItem("token");
   localStorage.removeItem("email");
-  window.location.href = "/signin";
+  window.location.href = "/";
 };
 
 const authFetch = (url, options) => {
