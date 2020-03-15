@@ -3,6 +3,7 @@ const express = require("express");
 const { join } = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const PORT = process.env.PORT || 3001;
 require("dotenv").config();
 
 const userRouter = require("./routes/user");
@@ -49,6 +50,10 @@ if (process.env.NODE_ENV === "production") {
 }
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}.`);
 });
 
 module.exports = app;
