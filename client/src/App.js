@@ -17,7 +17,7 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <BrowserRouter>
         <PrivateRoute path='/dashboards/:dashboardId' component={DashBoard} />
-        <Route path='/' component={SignIn} />
+        <Route exact path='/' component={SignIn} />
         <Route path='/signup' component={SignUp} />
         <PrivateRoute
           path='/(dashboards|calendar)/:dashboardId/columns/:columnId/tasks/:taskId'
