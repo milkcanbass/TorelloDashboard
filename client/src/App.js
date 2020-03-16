@@ -16,14 +16,15 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <BrowserRouter>
-        <PrivateRoute path='/dashboards/:dashboardId' component={DashBoard} />
+        <PrivateRoute exact path='/dashboards/:dashboardId' component={DashBoard} />
         <Route exact path='/' component={SignIn} />
-        <Route path='/signup' component={SignUp} />
+        <Route exact path='/signup' component={SignUp} />
         <PrivateRoute
+          exact
           path='/(dashboards|calendar)/:dashboardId/columns/:columnId/tasks/:taskId'
           render={props => <CardModal {...props} />}
         />
-        <Route path='/calendar/:dashboardId' component={Calendar} />
+        <Route exact path='/calendar/:dashboardId' component={Calendar} />
       </BrowserRouter>
     </MuiThemeProvider>
   );
