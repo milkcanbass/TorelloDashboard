@@ -18,6 +18,7 @@ import CreateColumnButton from "../components/CreateColumnButton";
 import CreateBoardColumn from "./TitleInputModal";
 
 const ColumnArea = props => {
+  console.log("triggred2");
   const classes = useStyles(props);
   const { value1, dashboardTitles } = useContext(UserContext);
   let [taskState, setTaskState] = value1;
